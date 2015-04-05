@@ -13,8 +13,13 @@ if ! grep -q '#esp-paths' /home/vagrant/.bashrc
 then
     echo "#esp-paths
 export PATH=$PATH:/home/vagrant/esp-open-sdk/xtensa-lx106-elf/bin
-export XTENSA_TOOLS_ROOT='/home/vagrant/xtensa-lx106-elf/bin'
+export XTENSA_TOOLS_ROOT='/home/vagrant/esp-open-sdk/xtensa-lx106-elf/bin'
 export SDK_BASE='/home/vagrant/esp-open-sdk/sdk'
 " >> /home/vagrant/.bashrc
     source /home/vagrant/.bashrc
+fi
+
+# Add a link to esptool
+if ! [ -e /usr/bin/esptool ]; then
+    ln -s /home/vagrant/esp-open-sdk/esptool/esptool.py /usr/bin/esptool
 fi
