@@ -4,6 +4,19 @@ Note: this is a WIP - Please file any issues with reproduction steps.
 
 # Setup
 
+## Download the VM
+
+* [Download Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+
+* [Download Vagrant](http://www.vagrantup.com/downloads.html)
+
+* Download this Repo:
+	* With Git:
+	    ````git clone https://github.com/matthew-james/esp-vagrant.git ~/esp-vagrant```
+	* [Or download the zip](https://github.com/matthew-james/esp-vagrant/archive/master.zip)
+
+* Open a terminal in this repo's folder before running the following commands.
+
 ## Initial Setup
 
 Get the VendorId and ProductID for your usb-serial device:
