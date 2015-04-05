@@ -1,0 +1,8 @@
+vm:
+    #$Build fails (OOM) with default 512mb
+    memory: '1024'
+    cpus: '1'
+usb-serial:
+    #Run VBoxManage list usbhost to get these values.
+    vendor_id: '0x0403'
+    product_id: '0x6001'

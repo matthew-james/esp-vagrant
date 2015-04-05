@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# todo: exit if root
+
+standalone='y'
+
+#start reading opts after the first arg
+OPTIND=2
+while getopts ":s:" opt; do
+  case $opt in
+    s)
+      standalone=${OPTARG}
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+#the action is the first arg
+action=$1
+
+##Run the action
+case "$action" in
+        install)
+            case "$standalone" in
+                    y)
+                        source /vagrant/bin/install-sdk.sh y
+                        ;;
+
+                    n)
+                        source /vagrant/bin/install-sdk.sh n
+                        ;;
+                    '')
+                        echo "Missing argument -s"
+                        echo "Please specify if you would like to build the standalone SDK"
+                        echo "Usage: $0 install -s {y|n}"
+                        exit 1
+                        ;;
+                    *)
+                        echo "Invalid argument $0"
+                        echo "Usage: $0 install -s {y|n}"
+                        exit 1
+            esac
+            ;;
+
+        update)
+            source /vagrant/bin/update-sdk.sh
+            ;;
+        *)
+            echo "Invalid action $1"
+            echo "Usage: $0 {install|update}"
+            exit 1
+esac
