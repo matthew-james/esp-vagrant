@@ -70,8 +70,14 @@ It seems to have problems everytime I try to install on provision.  Also, it's r
 
 First, make sure your ProductId and VendorId are set in config.yaml.  You can get these by running ````VBoxManage list usbhost````.
 
-Next, you can check if Ubuntu recognizes the device.  Unplug, then replug your device and type ````dmesg```` within the VM.  The last message should say something like ````[15240.987262] usb 1-1: generic converter now attached to ttyUSB0````.  If the ttyUSB* is not 0, you may need to modify your makefiles.  If you did not get a attached to * message at all, it is likely the drivers for your usb-serial device are missing.
+Next, you can check if Ubuntu recognizes the device.  Unplug, then replug your device and type ````dmesg```` within the VM.  The last message should say something like this:
+
+````[15240.987262] usb 1-1: generic converter now attached to ttyUSB0````
+
+If the ttyUSB* is not 0, you may need to modify your makefiles.  If you did not get a attached to * message at all, it is likely the drivers for your usb-serial device are missing.
 
 You can try ````sudo modprobe usbserial vendor=0x4348 product=0x5523````, replacing the IDs with your own IDs from the VboxManage command.
 
 If you receive a permissions error, check the owner and group of the serial port by running ````ls -al /dev/ttyUSB0```` - You may need to add your user to that group.
+
+**Please submit issues or pull requests if your usb-serial device isn't working so support can be added.**
