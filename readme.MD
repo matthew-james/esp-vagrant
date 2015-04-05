@@ -12,7 +12,9 @@ Note: this is a WIP - Please file any issues with reproduction steps.
 
 * Download this Repo:
 	* With Git:
-	    ````git clone https://github.com/matthew-james/esp-vagrant.git ~/esp-vagrant```
+
+	    ````git clone https://github.com/matthew-james/esp-vagrant.git ~/esp-vagrant````
+
 	* [Or download the zip](https://github.com/matthew-james/esp-vagrant/archive/master.zip)
 
 * Open a terminal in this repo's folder before running the following commands.
