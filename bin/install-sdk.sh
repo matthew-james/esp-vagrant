@@ -21,5 +21,5 @@ fi
 
 # Add a link to esptool
 if ! [ -e /usr/bin/esptool ]; then
-    ln -s /home/vagrant/esp-open-sdk/esptool/esptool.py /usr/bin/esptool
+    sudo ln -s /home/vagrant/esp-open-sdk/esptool/esptool.py /usr/bin/esptool
 fi
