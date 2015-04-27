@@ -15,8 +15,8 @@ then
 export PATH=$PATH:/home/vagrant/esp-open-sdk/xtensa-lx106-elf/bin
 export XTENSA_TOOLS_ROOT='/home/vagrant/esp-open-sdk/xtensa-lx106-elf/bin'
 export SDK_BASE='/home/vagrant/esp-open-sdk/sdk'
-" >> /home/vagrant/.bashrc
-    source /home/vagrant/.bashrc
+" >> /home/vagrant/.profile
+    source /home/vagrant/.profile
 fi
 
 # Add a link to esptool
