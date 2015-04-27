@@ -25,11 +25,5 @@ fi
 #colorize the bash prompt - it's easier to tell if you are in the vm or not
 echo "PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '" >> /home/vagrant/.bashrc
 
-#Prompt the user to install the SDK
-if ! [ -d /home/vagrant/esp-open-sdk ]; then
-    echo "---------------------------------------------------------------"
-    echo "\033[32mNOTE: You still need to install the esp-open-sdk\033[0m"
-    echo "To Install the esp-open-sdk:"
-    echo "  esp-open-sdk install"
-    echo ""
-fi
+# Install the sdk as the vagrant user
+sudo -u vagrant -i esp-open-sdk install

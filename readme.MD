@@ -31,19 +31,11 @@ Start the VM.
 
     vagrant up
 
+The first time you run ````vagrant up```` vagrant will install the SDK.
+
 You can login like this:
 
     vagrant ssh
-
-## Install the SDK
-
-The first time you login you need to install the SDK.
-
-You can do so like this:
-
-    esp-open-sdk install
-
-If you don't want to build the standalone SDK, you can pass ````-s n````.
 
 # Usage
 
@@ -61,10 +53,6 @@ To use the console, just type ````esp-console {baud}````, i.e.:
 ### I don't see the SDK.
 
 You need to manually install the SDK after creating the VM.  Run ````esp-open-sdk install```` and it will install it.  The install will take ~1 hour, but you only need to do it once.
-
-### Why not install the SDK on vagrant provision?
-
-It seems to have problems everytime I try to install on provision.  Also, it's really hard to read because the spinner creates a new line when provisioning.
 
 ### My USB-Serial device isn't working.
 
