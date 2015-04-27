@@ -27,8 +27,3 @@ echo "PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '" >> /home/vagrant/.bashrc
 
 # Install the sdk as the vagrant user
 sudo -u vagrant -i esp-open-sdk install
-
-# Add the sdk to the path
-echo export PATH=/home/vagrant/esp-open-sdk/xtensa-lx106-elf/bin:\$PATH >> /home/vagrant/.profile
-echo export XTENSA_TOOLS_ROOT=/home/vagrant/esp-open-sdk/xtensa-lx106-elf/bin >> /home/vagrant/.profile
-echo export SDK_BASE=/home/vagrant/esp-open-sdk/sdk >> /home/vagrant/.profile
