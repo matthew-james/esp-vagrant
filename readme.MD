@@ -75,3 +75,7 @@ You can try ````sudo modprobe usbserial vendor=0x4348 product=0x5523````, replac
 If you receive a permissions error, check the owner and group of the serial port by running ````ls -al /dev/ttyUSB0```` - You may need to add your user to that group.
 
 **Please submit issues or pull requests if your usb-serial device isn't working so support can be added.**
+
+### Credits
+
+This repo was originally based on [this pull request](https://github.com/pfalcon/esp-open-sdk/pull/27) by [Informatic](https://github.com/Informatic) as well as the [esp8266-dev](https://github.com/mziwisky/esp8266-dev) vagrant box by [mziwisky](https://github.com/mziwisky)
