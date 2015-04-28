@@ -47,6 +47,8 @@ To use the console, just type ````esp-console {baud}````, i.e.:
 
     esp-console 9600
 
+There are guides for compiling and burning the source-code examples, nodemcu, and the Espressif demos [here](https://github.com/matthew-james/esp-vagrant/wiki/burning-firmware).
+
 
 ## FAQ
 
