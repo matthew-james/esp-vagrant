@@ -66,6 +66,10 @@ Next, you can check if Ubuntu recognizes the device.  Unplug, then replug your d
 
 If the ttyUSB* is not 0, you may need to modify your makefiles.  If you did not get a attached to * message at all, it is likely the drivers for your usb-serial device are missing.
 
+If you got an attached message and it shows up in /dev/, but isn't listed when you run ````VBoxManage list usbhost````, than you may need to add your user to the ````vboxusers```` group.  This command worked for me on Ubuntu:
+
+    sudo adduser <my username> vboxusers
+
 You can try ````sudo modprobe usbserial vendor=0x4348 product=0x5523````, replacing the IDs with your own IDs from the VboxManage command.
 
 If you receive a permissions error, check the owner and group of the serial port by running ````ls -al /dev/ttyUSB0```` - You may need to add your user to that group.
