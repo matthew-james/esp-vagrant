@@ -52,10 +52,6 @@ There are guides for compiling and burning the source-code examples, nodemcu, an
 
 ## FAQ
 
-### I don't see the SDK.
-
-You need to manually install the SDK after creating the VM.  Run ````esp-open-sdk install```` and it will install it.  The install will take ~1 hour, but you only need to do it once.
-
 ### My USB-Serial device isn't working.
 
 First, make sure your ProductId and VendorId are set in config.yaml.  You can get these by running ````VBoxManage list usbhost````.
